@@ -1,5 +1,7 @@
 import Error from "./Error"
 import Register from "./Register"
-import Dashboard from "./Dashboard"
+import Landing from "./Landing"
+import Layout from "./Layout"
 
-export {Error, Register, Dashboard}
+
+export {Error, Register, Landing, Layout}

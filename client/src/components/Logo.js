@@ -3,24 +3,23 @@ import styled from "styled-components"
 
 const Logo = () => {
   return (
-    <Main>
+    <Main className = "logo">
       <img 
           src={logo} 
           width="100"  
-          alt="jobs tracker" 
-          className = "logo"
+          alt="jobs tracker"
+          className = "logo" 
       />
     </Main>
   )
 }
 
-const Main = styled.main`
-        width: var(--fluid-width);
-        max-width: var(--max-width);
-        margin: 0 auto;
+const Main = styled.div`
+        width: 110px;
         height: var(--nav-height);
-        display: flex;
-        align-items: center;
+        display: grid;
+        place-items: center;
+
 `
 
 export default Logo
