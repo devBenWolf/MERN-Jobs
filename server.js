@@ -1,7 +1,8 @@
 import express from "express"
-const app = express()
 import dotenv from "dotenv"
 import "express-async-errors"
+import morgan from "morgan"
+const app = express()
 dotenv.config()
 
 // Middleware imports
@@ -17,9 +18,20 @@ import connectDB from "./db/connect.js"
 
 app.use(express.json())
 
+// HTTP request logger
+if (process.env.NODE_ENV !== "production") {
+    app.use(morgan('dev'))
+}
+
 app.get(`/`, (req, res) => {
-    res.send(`Hello!`)
+    res.json({msg: `Welcome!`})
 })
+
+app.get(`/api/v1`, (req, res) => {
+    res.json({msg: `API!`})
+})
+
+
 
 // routers
 app.use(`/api/v1/auth`, authRouter)
