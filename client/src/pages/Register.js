@@ -15,7 +15,7 @@ const initialState = {
 
 
 const Register = () => {
-  const {isLoading, showAlert, displayAlert, user, loginUser, handleUser} = useAppContext()
+  const {isLoading, showAlert, displayAlert, user, handleUser} = useAppContext()
   const [values, setValues] = useState(initialState)
 
   // redirect to landing page
