@@ -74,7 +74,7 @@ const AppContextProvider = ({children}) => {
         try {
             const {data} = await axios.post(`/api/v1/auth/${endPoint}`, currentUser)
             const {user, token, location,} = data
-
+            console.log(data)
             dispatch({
                 type: USER_SUCCESS,
                 payload: {user, token, location, alertText}
@@ -88,6 +88,7 @@ const AppContextProvider = ({children}) => {
             })
         }
         clearAlert()
+        
     }
 
     return (
