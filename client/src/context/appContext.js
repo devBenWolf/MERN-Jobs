@@ -25,6 +25,8 @@ const initialState = {
     showSideBar: false
 }
 
+// This is a test
+
 const AppContext = createContext()
 const AppContextProvider = ({children}) => {
     const [state, dispatch] = useReducer(reducer, initialState)
